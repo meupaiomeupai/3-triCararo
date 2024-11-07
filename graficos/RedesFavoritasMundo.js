@@ -1,16 +1,16 @@
 import { getCSS, criarGrafico, incluirTexto } from "./common.js"
 
-async function redesFavoritasMundo() {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/redes-favoritas.json'
+async function produtosFavoritosMaquiagem() {
+    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/produtos-favoritos-maquiagem.json'
     const res = await fetch(url)
     const dados = await res.json()
-    const redes = Object.keys(dados)
+    const produtos = Object.keys(dados)
     const valores = Object.values(dados)
 
     const data = [
         {
             values: valores,
-            labels: redes,
+            labels: produtos,
             type: 'pie',
             textinfo: 'label+percent'
         }
@@ -21,7 +21,7 @@ async function redesFavoritasMundo() {
         paper_bgcolor: getCSS('--bg-color'),
         height: 700,
         title: {
-            text: 'Redes sociais que os usuários mais gostam',
+            text: 'Produtos de Maquiagem Preferidos pelos Usuários',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),
@@ -39,7 +39,7 @@ async function redesFavoritasMundo() {
 
     criarGrafico(data, layout)
 
-    incluirTexto(`Embora o <span>Instagram</span> ocupe a quarta posição em termos de número total de usuários entre as redes sociais, destaca-se como a <span>preferida pelos usuários</span>. Supera até mesmo o <span>Facebook</span>, a plataforma com mais usuários, sendo a terceira opção mais apreciada pelos usuários. <br>Essa preferência evidencia a forte conexão e apreço que as pessoas têm pelo Instagram em comparação com outras redes sociais`)
+    incluirTexto(`Embora a <span>base</span> seja um item básico na rotina de muitas pessoas, observa-se que o <span>batom</span> é o <span>produto preferido</span> entre os consumidores. Este dado destaca a importância de produtos de destaque e expressão pessoal na maquiagem. Em comparação, itens como <span>máscara de cílios</span> e <span>sombra</span> também possuem uma forte preferência, refletindo a diversidade de interesses e estilo dos usuários.`)
 }
 
-redesFavoritasMundo()
+produtosFavoritosMaquiagem()
