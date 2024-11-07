@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 :root {
-    --bg-color: #222831;
-    --primary-color: #DDDDDD;
-    --secondary-color: #F05454;
+    --bg-color: #f9f3f2; /* Cor de fundo suave, inspirada em tons nude */
+    --primary-color: #e6b8a2; /* Tom rosado de base para detalhes */
+    --secondary-color: #b85858; /* Cor acentuada, inspirada em tons de batom */
+    --highlight-color: #8c564b; /* Cor para destacar alguns elementos */
     --font: "Nunito Sans", sans-serif;
 }
 
 body {
     background-color: var(--bg-color);
-    color: var(--primary-color);
+    color: var(--highlight-color);
     font-family: var(--font);
     height: 100vh;
     margin: 0;
@@ -35,7 +36,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: var(--bg-color);
+    color: var(--highlight-color);
     margin: 0 2rem 1rem 0rem;
     font-size: 1.2rem;
 }
@@ -59,6 +60,7 @@ nav a:hover {
     text-align: center;
     padding: 2rem;
     border: var(--secondary-color) solid 2px;
+    color: var(--highlight-color);
 }
 
 span {
