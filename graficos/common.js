@@ -3,7 +3,7 @@ const getCSS = (variavel) => {
 }
 
 const tickConfig = {
-    color: getCSS('--secondary-color'), // Altere para uma cor de destaque mais ligada ao tema
+    color: getCSS('--secondary-color'), // Cor acentuada inspirada em tons de maquiagem
     size: 16,
     family: getCSS('--font')
 }
